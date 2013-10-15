@@ -1,7 +1,7 @@
 Git-celleration
 ===============
 
-Expect Scripts for accelerating git workflows
+An expect script for accelerating git web-design workflow.
 
 
 ## Description

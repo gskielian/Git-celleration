@@ -10,7 +10,7 @@ It's faster to template websites on localhost, but git pulling from the server a
 
 This expect-script simply automates the process of ssh-ing into the server and git pulling (after entering user and pass).
 
-## Installation
+## Exp file Installation
 
 First add executable bit:
 ```bash
@@ -18,9 +18,17 @@ chmod +x ./gitpull.exp
 ```
 
 then create alias for the following:
+
 ```bash
 alias gp="./gitpull.exp serverusername serverpassword host \"cd ~/your_repos_directory/ && git pull\" gituser gitpass"
 ````
+
+then just run from the command line -- reopen terminal and then type the following:
+
+```bash
+gp
+```
+to set the gears in motion...
 
 
 ## One Caveat

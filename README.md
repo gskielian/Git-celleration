@@ -23,7 +23,7 @@ then create alias for the following:
 alias gp="./gitpull.exp serverusername serverpassword host \"cd ~/your_repos_directory/ && git pull\" gituser gitpass"
 ````
 
-then just run from the command line -- reopen terminal and then type the following:
+then just run from the command line -- reopen terminal and then type the following
 
 ```bash
 gp

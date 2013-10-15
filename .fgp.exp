@@ -1,0 +1,38 @@
+#!/usr/bin/expect
+
+#call this with a shell script as follows:
+
+# place the following in a script
+# ./.fgp.exp serverusername serverpassword host "cd ~/directory/ && git pull" gituser gitpass
+
+set timeout 20
+
+;# -- command line arguments to our scripts
+set user [lindex $argv 0]
+set password [lindex $argv 1]
+set host [lindex $argv 2]
+set dasCommand [lindex $argv 3]
+set gituser [lindex $argv 4]
+set gitpass [lindex $argv 5]
+ 
+;# shell prompt character
+set prompt "# "
+
+spawn /usr/bin/ssh $user@$host
+ 
+match_max 100000 
+expect "password:"
+send -- "$password\r"
+expect "$prompt" 
+send -- "$dasCommand\r"
+
+expect "'https://github.com': "
+send -- "$gituser\r"
+
+expect "@github.com': "
+send -- "$gitpass\r"
+
+expect "$prompt" 
+send -- "exit\r"
+expect eof
+

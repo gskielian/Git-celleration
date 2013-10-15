@@ -2,8 +2,10 @@
 
 #call this with a shell script as follows:
 
-# place the following in a script
-# ./.fgp.exp serverusername serverpassword host "cd ~/directory/ && git pull" gituser gitpass
+# chmod +x ./gitpull.exp
+### Then place the following in a script
+# ./gitpull.exp serverusername serverpassword host "cd ~/directory/ && git pull" gituser gitpass
+
 
 set timeout 20
 

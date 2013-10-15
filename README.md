@@ -1,4 +1,4 @@
-Gitcellerations
+Git-celleration
 ===============
 
 Expect Scripts for accelerating git workflows
